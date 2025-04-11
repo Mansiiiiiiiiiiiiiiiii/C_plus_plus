@@ -1,38 +1,18 @@
 #include<iostream>
 using namespace std;
-#include<string>
-
-class Teacher{
-	private:
-		double salary;
+//classes are user defined data type
+class Test{
 	public:
-		string name;
-		string dept;
-		string subject;
+		int a;
+		int b;
 		
-		void changeDept(string newDept){
-			dept = newDept;
-		}
-		
-		//setter
-		void setSalary(double s){
-			salary = s;
-		}
-		
-		//getter
-		double getSalary(){
-			return salary;
+		void sum(){
+			cout<<a+b<<endl;
 		}
 };
 int main(){
-	Teacher t1;
-	t1.name="Prince Jain";
-	t1.subject="Big Data";
-	t1.dept="Computer Science";
-	t1.setSalary(25000);
-	
-	cout<<t1.name<<endl;
-	cout<<t1.subject<<endl;
-	cout<<t1.getSalary()<<endl;
-	cout<<t1.dept<<endl;
+	Test ob;
+	ob.a = 10;
+	ob.b =20;
+	ob.sum();
 }

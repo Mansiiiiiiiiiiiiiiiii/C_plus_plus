@@ -1,31 +1,22 @@
-#include<iostream>
-#include<string>
+#include<bits/stdc++.h>
 using namespace std;
-
-class Parent{
+class A{
 	public:
-		void getInfo(){
-			cout<<"Parent class";
-		}
-		virtual void hello(){
-			cout<<"Hello from Virtual function";
-		}
 		
+		virtual void show(){
+			cout<<"Class A";
+		}
 };
-
-class Child: public Parent{
+class B: public A{
 	public:
-		void getInfo(){
-			cout<<"child class";
-		}
-		void hello(){
-			cout<<"Hello from child";
+		void show(){
+			cout<<"Class B";
 		}
 };
-
 int main(){
-	Child c1;
-	c1.hello();
+	A *bptr;
+	B aa;
+	bptr = &aa;
+	bptr -> show();
 	return 0;
-	
 }

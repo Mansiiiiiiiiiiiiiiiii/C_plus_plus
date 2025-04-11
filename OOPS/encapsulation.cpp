@@ -1,48 +1,28 @@
 #include<iostream>
 using namespace std;
-#include<string>
-
-class Teacher{
+class Test{
 	private:
-		double salary;
+		int a;
+		int b;
 	public:
-		string name;
-		string dept;
-		string subject;
-		
-		void changeDept(string newDept){
-			dept = newDept;
+		void setA(int aa){
+			a=aa;
 		}
-		
-		//setter
-		void setSalary(double s){
-			salary = s;
+		void setB(int bb){
+			b=bb;
 		}
-		
-		//getter
-		double getSalary(){
-			return salary;
+		int getA(){
+			return a;
+		}
+		int getB(){
+			return b;
 		}
 };
 
-class Account{
-	private:
-		double balance;
-		string passwords; //data hiding
-		
-	public:
-		string accountId;
-		string username;
-};
 int main(){
-	Teacher t1;
-	t1.name="Anupriya Gupta";
-	t1.subject="Java";
-	t1.dept="Computer Science";
-	t1.setSalary(25000);
-	
-	cout<<t1.name<<endl;
-	cout<<t1.subject<<endl;
-	cout<<t1.getSalary()<<endl;
-	cout<<t1.dept<<endl;
+	Test ob;
+	ob.setA(10);
+	ob.setB(20);
+	cout<<ob.getA()<<endl;
+	cout<<ob.getB()<<endl;
 }
