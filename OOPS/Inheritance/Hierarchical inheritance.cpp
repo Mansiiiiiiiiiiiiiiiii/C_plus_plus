@@ -1,58 +1,31 @@
-#include <iostream>
-#include <string>
+#include<iostream>
 using namespace std;
 
-// Base class
-class Person {
-public:
-    string name;
-    int age;
-
-    void displayDetails() {
-        cout << "Name: " << name << endl;
-        cout << "Age: " << age << endl;
-    }
+class Animals{
+	public:
+		Animals(){
+			cout<<"There are 2 types of animals land and water"<<endl;
+		}
 };
 
-// Derived class 1
-class Student : public Person {
-public:
-    int rollno;
-
-    void displayStudentDetails() {
-        displayDetails();
-        cout << "Roll Number: " << rollno << endl;
-    }
+class Land : public Animals{
+	public:
+		Land(){
+			cout<<"Land Animals:"<<endl;
+			cout<<"Mosquito\nSaltwater Crocodile\nAfrican Elephant\nCape Buffaloo"<<endl;
+		}
 };
 
-// Derived class 2
-class Teacher : public Person {
-public:
-    string subject;
-
-    void displayTeacherDetails() {
-        displayDetails();
-        cout << "Subject: " << subject << endl;
-    }
+class Water : public Animals{
+	public:
+		Water(){
+			cout<<"Water animals"<<endl;
+			cout<<"Sharks\nCrocodile\nJelly Fish\nPufferfish\nLion Fish"<<endl;
+		}
 };
 
-int main() {
-    // Creating and displaying details of a Student
-    Student s1;
-    s1.name = "John";
-    s1.age = 20;
-    s1.rollno = 101;
-    cout << "Student Details:" << endl;
-    s1.displayStudentDetails();
-
-    // Creating and displaying details of a Teacher
-    Teacher t1;
-    t1.name = "Mrs. Smith";
-    t1.age = 45;
-    t1.subject = "Mathematics";
-    cout << "\nTeacher Details:" << endl;
-    t1.displayTeacherDetails();
-
-    return 0;
+int main(){
+	Land ll;
+	Water ww;
+	return 0;
 }
-

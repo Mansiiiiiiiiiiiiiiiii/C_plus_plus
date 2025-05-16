@@ -1,28 +1,26 @@
 #include<iostream>
-#include<string>
 using namespace std;
 
-class student{
+class LandAnimal{
 	public:
-		string name;
-		int rollno;
-		
+		LandAnimal(){
+			cout<<"hippopotamus is a land animal"<<endl;
+		}
 };
-class Teacher{
+class WaterAnimal{
 	public:
-		string subject;
-		double salary;
+		WaterAnimal(){
+			cout<<"box jellyfish is water animal"<<endl;
+		}
+};
+class AmphibiousAnimal: public LandAnimal, public WaterAnimal{
+	public:
+		AmphibiousAnimal(){
+			cout<<"Golden Poison Frog are ambhibious animals"<<endl;
+		}
 };
 
-class TA:public student, public Teacher{
-	
-};
 int main(){
-	TA t1;
-	t1.name="Amulya";
-	t1.subject="engineering";
-	
-	cout<<t1.name<<endl;
-	cout<<t1.subject<<endl;
-	
+	AmphibiousAnimal obj1;
+	return 0;
 }

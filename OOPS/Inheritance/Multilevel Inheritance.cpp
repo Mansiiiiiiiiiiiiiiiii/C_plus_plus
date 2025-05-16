@@ -1,28 +1,29 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
-class Grandfather{
+class Animals{
 	public:
-		void house(){
-			cout<<"Grandfather"<<endl;
+		Animals(){
+			cout<<"There are many types of animals"<<endl;
+			cout<<"Snakes\nScorpions\nStonefish\nReptiles "<<endl;
 		}
 };
-class Father: public Grandfather{
+
+class LandAnimal: public Animals{
 	public:
-		void car(){
-			cout<<"Father's car"<<endl;
+		LandAnimal(){
+			cout<<"Hippopotamus is a land animal"<<endl;
 		}
 };
-class Child:public Father{
+
+class FourFootLandAnimal : public LandAnimal{
 	public:
-		void bike(){
-			cout<<"Child's bike"<<endl;
+		FourFootLandAnimal(){
+			cout<<"Elephant is a four foot land animals"<<endl;
 		}
 };
+
 int main(){
-	Child c;
-	c.house();
-	c.car();
-	c.bike();
-	return 0;
+FourFootLandAnimal ff;
+return 0;	
 }

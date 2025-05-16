@@ -1,36 +1,33 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
-class A{
+class Vehicles{
 	public:
-		void show(){
-			cout<<"Class A"<<endl;
+		Vehicles(){
+			cout<<"There are many types of vehicles"<<endl;
 		}
 };
-class B: public A{
+class Fare{
 	public:
-		void showB(){
-			cout<<"Class B"<<endl;
+		Fare(){
+			cout<<"Car fare is costlier than Bus"<<endl;
 		}
 };
-class C{
+class Car: public Vehicles{
 	public:
-		void showC(){
-			cout<<"Class C"<<endl;
+		Car(){
+			cout<<"108 Crores"<<endl;
 		}
 };
-//Hybrid Inheritance
-class D:public B, public C{
+class Bus: public Vehicles, public Fare{
 	public:
-		void showD(){
-			cout<<"class D"<<endl;
+		Bus(){
+			cout<<"Bus price is"<<endl;
+			cout<<"2.20 Cr"<<endl;
 		}
 };
+
 int main(){
-	D obj;
-	obj.show();
-	obj.showB();
-	obj.showC();
-	obj.showD();
+	Bus b;
 	return 0;
 }
